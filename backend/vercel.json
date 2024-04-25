@@ -3,14 +3,14 @@
     "name" : "Book-Store",
     "builds": [
         {
-            "src" : "index.js" ,
+            "src" : "*.js" ,
             "use" : "@vercel/node"
         }
     ],
     "routes" : [
         {
             "src":"/(.*)" , 
-            "dest": "/index.js"
+            "dest": "/"
         }
     ]
 }
