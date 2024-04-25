@@ -17,7 +17,7 @@ function EditBook() {
   useEffect(() => {
     setLoading(true);
     axios
-      .get(`https://book-store-alpha-eight.vercel.app/${id}`)
+      .get(`https://book-store-alpha-eight.vercel.app/books/${id}`)
       .then((response) => {
         setTitle(response.data.title);
         setAuthor(response.data.author);
