@@ -15,7 +15,7 @@ function DeleteBook() {
   const handleDeleteBook = () => {
     setLoading(true);
     axios
-      .delete(`http://localhost:5555/books/${id}`)
+      .delete(`https://book-store-alpha-eight.vercel.app/${id}`)
       .then(() => {
         setLoading(false);
         navigate("/");
@@ -31,7 +31,7 @@ function DeleteBook() {
   useEffect(() => {
     setLoading(true);
     axios
-      .get(`http://localhost:5555/books/${id}`)
+      .get(`https://book-store-alpha-eight.vercel.app/${id}`)
       .then((response) => {
         setBook(response.data);
         setLoading(false);
