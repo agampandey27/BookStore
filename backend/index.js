@@ -1,6 +1,5 @@
 import express, { request, response } from "express";
 import mongoose from "mongoose";
-import { Book } from "./models/BookModel.js";
 import booksRoute from "./routes/booksRoute.js";
 import cors from "cors";
 
