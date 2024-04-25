@@ -11,7 +11,7 @@ app.use(express.json());
 
 app.use(
   cors({
-    origin: "https://book-store-frontend-flame.vercel.app/",
+    origin: "https://book-store-frontend-flame.vercel.app",
     method: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type"],
   })
