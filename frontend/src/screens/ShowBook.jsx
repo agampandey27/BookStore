@@ -13,7 +13,7 @@ function ShowBook() {
   useEffect(() => {
     setLoading(true);
     axios
-      .get(`https://book-store-alpha-eight.vercel.app/${id}`)
+      .get(`https://book-store-alpha-eight.vercel.app${id}`)
       .then((response) => {
         setBook(response.data);
         setLoading(false);
