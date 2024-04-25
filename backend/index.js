@@ -32,7 +32,7 @@ mongoose
   )
   .then(() => {
     console.log("App connected to database");
-    app.listen("https://book-store-alpha-eight.vercel.app", () => {
+    app.listen(PORT, () => {
       console.log(`Server is running on port ${PORT}`);
     });
   })
