@@ -1,10 +1,10 @@
 import express, { request, response } from "express";
-import { PORT, mongoDBURL } from "./config.js";
 import mongoose from "mongoose";
 import { Book } from "./models/BookModel.js";
 import booksRoute from "./routes/booksRoute.js";
 import cors from "cors";
 
+const PORT = process.env.PORT || 5555
 const app = express();
 
 app.use(express.json());
@@ -32,8 +32,8 @@ mongoose
   )
   .then(() => {
     console.log("App connected to database");
-    app.listen(5555, () => {
-      console.log(`Server is running on port ${5555}`);
+    app.listen(PORT, () => {
+      console.log(`Server is running on port ${PORT}`);
     });
   })
   .catch((error) => {
