@@ -38,7 +38,7 @@ function EditBook() {
     };
     setLoading(true);
     axios
-      .put(`https://book-store-alpha-eight.vercel.app/${id}`, data)
+      .put(`https://book-store-alpha-eight.vercel.app/books/${id}`, data)
       .then(() => {
         setLoading(false);
         navigate("/");
