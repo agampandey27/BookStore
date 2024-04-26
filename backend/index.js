@@ -2,6 +2,7 @@ import express, { request, response } from "express";
 import mongoose from "mongoose";
 import booksRoute from "./routes/booksRoute.js";
 import cors from "cors";
+import { mongoDBURL } from "./config.js";
 
 const PORT = process.env.PORT || 5555
 const app = express();
@@ -27,7 +28,7 @@ app.use("/books", booksRoute);
 
 mongoose
   .connect(
-    "mongodb+srv://agampandey:mdag1902@cluster0.t9vlrql.mongodb.net/books-collection?retryWrites=true&w=majority"
+    mongoDBURL
   )
   .then(() => {
     console.log("App connected to database");
